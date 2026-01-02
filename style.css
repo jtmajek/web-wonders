@@ -1,59 +1,56 @@
-/* Reset some default styles */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic layout and typography */
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Header styles */
-header {
-    background-color: #333;
-    color: white;
+/* Header */
+.site-header {
+    background-color: #222;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 20px;
 }
 
-header h1 {
-    font-size: 2.5em;
+.site-header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #ccc;
 }
 
 /* Main content */
-main {
-    padding: 20px;
-}
-
-.about-section {
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-section h2 {
-    color: #333;
+.content h2 {
+    margin-bottom: 15px;
 }
 
-.about-section p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+.content p {
+    margin-bottom: 15px;
 }
 
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: white;
+/* Footer */
+.site-footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
+    background-color: #222;
+    color: #fff;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
