@@ -2,77 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PetroPrime Refinery</title>
+    <title>Happy Hen Farm</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>PetroPrime Oil Refinery</h1>
-    <p>Refining Energy for the Future</p>
+    <h1>Happy Hen Farm 🐔</h1>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#payment">Payment</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#order">Order</a>
-    <a href="#payment">Payment</a>
-</nav>
+<section class="hero">
+    <h2>Fresh Organic Eggs Straight From Our Farm</h2>
+    <p>Healthy hens. Healthy eggs. Happy customers.</p>
+</section>
 
 <section id="about">
     <h2>About Us</h2>
     <p>
-        PetroPrime is a leading oil refinery providing high-quality petroleum products
-        to industries and consumers worldwide.
+        Happy Hen Farm is a family-owned farm dedicated to producing
+        fresh, organic, and high-quality eggs. Our hens are raised
+        naturally with love and care.
     </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Farm-fresh egg sales</li>
+        <li>Bulk egg supply for restaurants</li>
+        <li>Home delivery</li>
+        <li>Farm visits & education</li>
+    </ul>
 </section>
 
 <section id="products">
     <h2>Our Products</h2>
+
     <div class="product">
-        <h3>Diesel Fuel</h3>
-        <p>$1.20 / liter</p>
+        <h3>Organic Eggs (12 pcs)</h3>
+        <p>$5.00</p>
+        <button onclick="addToCart(5)">Add to Cart</button>
     </div>
+
     <div class="product">
-        <h3>Petrol (Gasoline)</h3>
-        <p>$1.35 / liter</p>
+        <h3>Free-Range Eggs (30 pcs)</h3>
+        <p>$12.00</p>
+        <button onclick="addToCart(12)">Add to Cart</button>
     </div>
-    <div class="product">
-        <h3>Aviation Fuel</h3>
-        <p>$1.80 / liter</p>
-    </div>
+
+    <p class="total">Total: $<span id="total">0</span></p>
 </section>
 
-<section id="order">
-    <h2>Place an Order</h2>
-    <form id="orderForm">
-        <label>Customer Name</label>
-        <input type="text" id="name" required>
-
-        <label>Select Product</label>
-        <select id="product">
-            <option value="diesel">Diesel</option>
-            <option value="petrol">Petrol</option>
-            <option value="aviation">Aviation Fuel</option>
-        </select>
-
-        <label>Quantity (Liters)</label>
-        <input type="number" id="quantity" min="1" required>
-
-        <button type="submit">Generate Bill</button>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
     </form>
-
-    <div id="bill"></div>
 </section>
 
 <section id="payment">
-    <h2>Payment</h2>
-    <button id="payBtn">Pay Now</button>
-    <p id="paymentStatus"></p>
+    <h2>Make a Payment</h2>
+    <form onsubmit="processPayment(event)">
+        <input type="text" placeholder="Card Holder Name" required>
+        <input type="text" placeholder="Card Number" required>
+        <input type="month" required>
+        <input type="text" placeholder="CVV" required>
+        <button type="submit">Pay Now</button>
+    </form>
+    <p id="paymentMessage"></p>
 </section>
 
 <footer>
-    <p>© 2026 PetroPrime Oil Refinery</p>
+    <p>© 2026 Happy Hen Farm. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
